@@ -5,28 +5,16 @@
 class Pnc < Formula
   desc "Paranoco CLI toolbelt"
   homepage "https://github.com/paranoco/pnc"
-  version "0.1.1"
+  version "0.1.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/paranoco/pnc/releases/download/v0.1.1/pnc_0.1.1_darwin_amd64.tar.gz"
-    sha256 "ae5cd5c9fa749bae779355931d998f51919c44660d4d91ce1b3af6ba9b208709"
+    url "https://github.com/paranoco/pnc/releases/download/v0.1.2/pnc_0.1.2_darwin_amd64.tar.gz"
+    sha256 "d3d9cc8076c667fab81edd85fb1ea56cd0473ed12eebfc6309014b273851c40b"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/paranoco/pnc/releases/download/v0.1.1/pnc_0.1.1_darwin_arm64.tar.gz"
-    sha256 "0274cc6affa958b3e7cf72049a77cbb379f5bf6cc8fec5f8847aed2f3a614d73"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/paranoco/pnc/releases/download/v0.1.1/pnc_0.1.1_linux_amd64.tar.gz"
-    sha256 "92aacbf747ad340a9af514a01b7a52cd0459954073ec3e76715b01398287fd43"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/paranoco/pnc/releases/download/v0.1.1/pnc_0.1.1_linux_armv6.tar.gz"
-    sha256 "cf7d6eb895902c05830641224745a8bb401887dd8444637ffd6e66718a90828d"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/paranoco/pnc/releases/download/v0.1.1/pnc_0.1.1_linux_arm64.tar.gz"
-    sha256 "ec7ba49d0be81296f0a8739f7b18613b3495ea3f9ac2a94086f91893028ecf8c"
+    url "https://github.com/paranoco/pnc/releases/download/v0.1.2/pnc_0.1.2_darwin_arm64.tar.gz"
+    sha256 "fc3b730a7ef045ffd5ea2c0e53224b136953fa070daa7f85590b0ae267bce882"
   end
 
   def install
