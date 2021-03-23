@@ -5,28 +5,28 @@
 class Pnc < Formula
   desc "Paranoco CLI toolbelt"
   homepage "https://github.com/paranoco/pnc"
-  version "0.0.1"
+  version "0.1.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/paranoco/pnc/releases/download/v0.0.1/pnc_0.0.1_darwin_amd64.tar.gz"
-    sha256 "900481ebdb0209bf82a1204b285ef5e8abb7e1f75beda5c3bb7bcf67cf1edade"
+    url "https://github.com/paranoco/pnc/releases/download/v0.1.0/pnc_0.1.0_darwin_amd64.tar.gz"
+    sha256 "6d56b514069616eb1deabf4c343622aa89f16dab8aeb952cbeb4d676aeebdca6"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/paranoco/pnc/releases/download/v0.0.1/pnc_0.0.1_darwin_arm64.tar.gz"
-    sha256 "1ee2dafe0e7d921bd2fa21f7ded20dce3c7a5318b8098248df2191d334aec523"
+    url "https://github.com/paranoco/pnc/releases/download/v0.1.0/pnc_0.1.0_darwin_arm64.tar.gz"
+    sha256 "1bf1c88a8bc1d55fc1a89c880e57dd35dffe6bb09cc42e618388a2e2803da59e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/paranoco/pnc/releases/download/v0.0.1/pnc_0.0.1_linux_amd64.tar.gz"
-    sha256 "cb16b08d4551c8e93a29a740bf6b6a9aa067778a7ca9e436d5ff372b2efa7633"
+    url "https://github.com/paranoco/pnc/releases/download/v0.1.0/pnc_0.1.0_linux_amd64.tar.gz"
+    sha256 "0b6386623b381ee71e8a6fe5f078bd02865dac2ec37889716b2329ff87e3ac9b"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/paranoco/pnc/releases/download/v0.0.1/pnc_0.0.1_linux_armv6.tar.gz"
-    sha256 "e4d916eb759cb119834abc40ceb33a4ee6c4759a981f3f71c43bd7011160b3a2"
+    url "https://github.com/paranoco/pnc/releases/download/v0.1.0/pnc_0.1.0_linux_armv6.tar.gz"
+    sha256 "91811e2a04b9cd6bb4595873e526a50c8a339c990c08553dcb81a05759eb3f06"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/paranoco/pnc/releases/download/v0.0.1/pnc_0.0.1_linux_arm64.tar.gz"
-    sha256 "40e35adab6fa65d6767b7b58515bc343499935e94c573e7086c2cfdf0803d2bc"
+    url "https://github.com/paranoco/pnc/releases/download/v0.1.0/pnc_0.1.0_linux_arm64.tar.gz"
+    sha256 "60080b2cc769b578c1440cb90a5bbf1df81d57eaef3801d54f06a28bcbb107ca"
   end
 
   def install
