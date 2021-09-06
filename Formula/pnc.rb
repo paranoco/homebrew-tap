@@ -5,16 +5,19 @@
 class Pnc < Formula
   desc "Paranoco CLI toolbelt"
   homepage "https://github.com/paranoco/pnc"
-  version "0.1.2"
+  version "0.1.3"
   bottle :unneeded
+  depends_on :macos
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/paranoco/pnc/releases/download/v0.1.2/pnc_0.1.2_darwin_amd64.tar.gz"
-    sha256 "d3d9cc8076c667fab81edd85fb1ea56cd0473ed12eebfc6309014b273851c40b"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/paranoco/pnc/releases/download/v0.1.2/pnc_0.1.2_darwin_arm64.tar.gz"
-    sha256 "fc3b730a7ef045ffd5ea2c0e53224b136953fa070daa7f85590b0ae267bce882"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/paranoco/pnc/releases/download/v0.1.3/pnc_0.1.3_darwin_amd64.tar.gz"
+      sha256 "6b66822255074fd340689c9fa14482e04ffd7a3f184201715dde4eda4a81f54a"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/paranoco/pnc/releases/download/v0.1.3/pnc_0.1.3_darwin_arm64.tar.gz"
+      sha256 "7e37cd53a81d5396a548fa1f1abc93f21385a8eead6c75a8ae754b96bd7273c9"
+    end
   end
 
   def install
