@@ -5,8 +5,7 @@
 class Pnc < Formula
   desc "Paranoco CLI toolbelt"
   homepage "https://github.com/paranoco/pnc"
-  version "0.1.3"
-  bottle :unneeded
+  version "0.1.3.1"
   depends_on :macos
 
   on_macos do
